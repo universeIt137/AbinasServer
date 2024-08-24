@@ -7,6 +7,7 @@ const servicesRoutes = require("./ngo/service.routes.js");
 const newsRouter = require("./ngo/news.routes.js");
 const mediaRoutes = require("./ngo/media.routes.js");
 const ourConcernRoutes = require("./ngo/ourConcern.routes.js");
+const AboutUsRoutes = require("./ngo/about-us.routes.js");
 const fdrRoutes = require("./ngo/fdr.routes.js");
 
 
@@ -20,6 +21,7 @@ rootRouter.use("/services", servicesRoutes);
 rootRouter.use("/news", newsRouter);
 rootRouter.use("/media", mediaRoutes);
 rootRouter.use("/our-concern", ourConcernRoutes);
+rootRouter.use("/about-us", AboutUsRoutes);
 // fdr
 rootRouter.use("/fdr", fdrRoutes);
 
