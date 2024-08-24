@@ -10,6 +10,8 @@ const ourConcernRoutes = require("./ngo/ourConcern.routes.js");
 const AboutUsRoutes = require("./ngo/about-us.routes.js");
 const fdrRoutes = require("./ngo/fdr.routes.js");
 
+const { jobcircularRoutes, noticeRouter, csrRouter, contactRouter} = require("./ngo/get-in-touch.routes.js");
+
 
 
 let rootRouter = router;
@@ -22,6 +24,13 @@ rootRouter.use("/news", newsRouter);
 rootRouter.use("/media", mediaRoutes);
 rootRouter.use("/our-concern", ourConcernRoutes);
 rootRouter.use("/about-us", AboutUsRoutes);
+
+// get in touch 
+rootRouter.use("/get-in-touch/job-circular", jobcircularRoutes);
+rootRouter.use("/get-in-touch/csr", csrRouter);
+rootRouter.use("/get-in-touch/contact", contactRouter);
+rootRouter.use('/get-in-touch/notice', noticeRouter);
+
 // fdr
 rootRouter.use("/fdr", fdrRoutes);
 
